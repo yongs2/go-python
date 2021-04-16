@@ -53,6 +53,12 @@ _gopy_PyObject_CallFunction(PyObject *o, int len, char* pyfmt, void *cargs) {
 
 		case 8:
 			return PyObject_CallFunction(o, pyfmt, args[0], args[1], args[2], args[3], args[4], args[5], args[6], args[7]);
+			
+		case 9:
+			return PyObject_CallFunction(o, pyfmt, args[0], args[1], args[2], args[3], args[4], args[5], args[6], args[7], args[8]);
+			
+		case 10:
+			return PyObject_CallFunction(o, pyfmt, args[0], args[1], args[2], args[3], args[4], args[5], args[6], args[7], args[8], args[9]);
 
 		default:
 			PyErr_Format(PyExc_RuntimeError, "python: invalid number of arguments (%d)", len);
@@ -105,6 +111,12 @@ _gopy_PyObject_CallMethod(PyObject *o, char *method, int len, char* pyfmt, void 
 		case 8:
 			return PyObject_CallMethod(o, method, pyfmt, args[0], args[1], args[2], args[3], args[4], args[5], args[6], args[7]);
 
+		case 9:
+			return PyObject_CallMethod(o, method, pyfmt, args[0], args[1], args[2], args[3], args[4], args[5], args[6], args[7], args[8]);
+			
+		case 10:
+			return PyObject_CallMethod(o, method, pyfmt, args[0], args[1], args[2], args[3], args[4], args[5], args[6], args[7], args[8], args[9]);
+			
 		default:
 			PyErr_Format(PyExc_RuntimeError, "python: invalid number of arguments (%d)", len);
 			return NULL;
