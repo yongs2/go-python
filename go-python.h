@@ -11,7 +11,7 @@
 #include <string.h>
 
 /* go-python */
-#define _gopy_max_varargs 8 /* maximum number of varargs accepted by go-python */
+#define _gopy_max_varargs 10 /* maximum number of varargs accepted by go-python */
 
 /* --- object --- */
 
